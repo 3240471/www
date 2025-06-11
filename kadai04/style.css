@@ -1,0 +1,29 @@
+@charset "UTF-8";
+header{
+    background-color: black;
+    color: white;
+    padding: 25px;
+}
+
+h1{
+    text-align: center;
+}
+
+section{
+    padding-top: 30px;
+    text-align: center;
+    width: 600px;
+    margin: 0px auto;
+    background-color: white;
+}
+
+body{
+    background-color: dimgray;
+}
+
+footer{
+    padding-top: 30px;
+    background-color: lightgray;
+    text-align: center;
+}
+
