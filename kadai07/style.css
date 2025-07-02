@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+img{
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    display: block;
+}
+
+.card{
+    width: 500px;
+    height: auto;
+    margin: auto;
+}
+
+.image{
+    width: 100%;
+    height: auto;
+}
+
+.text{
+    width: 100%;
+    height: auto;
+    padding: 20px 18px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.text > * + *{
+    margin-top: 10px;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 125%;
+}
+
+.textbox{
+    font-size: 12px;
+    line-height: 150%;
+}
+
+.card{
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    margin-bottom: 30px;
+}
+
+header{
+    background-color: darkblue;
+    color: #ffffff;
+}
+
+h1{
+    text-align: center;
+}
+
+.headers{
+    text-align: center;
+    padding: 0px 5px 0px 5px;
+    color: #ffffff;
+}
+
+body{
+    background-color: #cccccc;
+}
+
+.contact{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%; 
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link{ 
+    color: white;
+}
+
+a:visited{ 
+    color: white;
+}
+
+a:hover{ 
+    color: white;
+}
+
+a:active{ 
+    color: white;
+}
+
+h2{
+    border-bottom: 5px solid blue;
+}

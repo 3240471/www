@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <h1>ひだまりソリューションズ</h1>
+    <div class="headers">
+        <a href="#abut">会社概要</a>
+        <a href="#services">サービス</a>
+        <a href="#contact">お問い合わせ</a>
+    </div>
+    </header>
+    <section id="about">
+        <h2>会社概要</h2>
+        <p>私たちは地域密着型ITソリューション企業として、クラウド導入やウェブ制作を通じた業務改善を支援します。</p>
+    </section>
+    <section id="services">
+        <h2>サービス紹介</h2>
+        <div class="card">
+            <div class="text">
+                <div class="title">
+                    Web制作
+                </div>
+            </div>
+            <div class="image">
+                <img src="img/programcode_photo.jpg" alt="プログラミング">
+            </div>
+            <div class="text">
+                <div class="textbox">
+                    スマートフォン対応のモダンなWebサイトを作成します。
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="text">
+                <div class="title">
+                    クラウド導入支援
+                </div>
+                <div class="textbox">
+                    Google WorkspaceやMicrosoft 365などの導入をサポートします。
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="text">
+                <div class="title">
+                    デジタル研修
+                </div>
+                <div class="textbox">
+                    中小企業向けのITリテラシー研修も承っています。
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>お問い合わせ</h2>
+    <form>
+        <label for="name">お名前:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">お問い合わせ内容:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">送信</button>
+    </form>
+
+    </section>
+</body>
+</html>
