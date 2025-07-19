@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>概要ページ</title>
+    <script>
+        var pics_src = new Array(
+            "image/omisyoninyasiki1.jpg","image/koinokawa.jpg",
+            "image/fujiihikosiroutei.jpg","image/nakaejunnjiroutei.jpg",
+            "image/tonomurasigerutei.jpg","image/tonomurauheitei.jpg",
+            "image/hatinennann.jpg"
+        );
+            var num = 0;
+
+            function go_forward(){
+                if (num == 6) {
+                    num = 0;
+                }
+                else {
+                    num++;
+                }
+                document.getElementById("mypic").src=pics_src[num];
+            }
+
+            function go_back(){
+                if (num == 0) {
+                    num = 2;
+                }
+                else {
+                    num --;
+                }
+                document.getElementById("mypic").src=pics_src[num];
+            }
+    </script>
+</head>
+<body>
+    <nav class="target">
+            <a href="food.html" target="_blank" class="link">郷土料理</a>
+            <a href="spot.html" target="_blank" class="link">観光名所</a>    </nav>
+    <header>
+            <img class="head" src="image/title.jpg" style="display: block;">
+    </header>
+    <main>
+        <h1>五個荘（金堂の街並み）</h1>
+        <div>
+            <div class="slideshow">
+            <img id="mypic" onclick="slideshow()" 
+                src="image/omisyoninyasiki1.jpg">
+            <input type="button" value="戻る" onclick="go_back()">
+            <input type="button" value="進む" onclick="go_forward()">
+        </div>
+        <p class="index_text">
+            近代日本経済の基礎を築いた近江商人のふるさとで、
+            白壁の蔵や屋敷が豊かな自然と調和しています。
+            なかでも<strong>金堂地区</strong>は、近江商人ゆかりの地として知られており、
+            陣屋を中心に寺院を配し、
+            周囲に民家と田畑が広がる農村集落の姿がよく残り、
+            いくつかの商人屋敷が公開されています。
+            いずれも広大な敷地に立派な門を構え、
+            富の象徴ともいえる蔵にも意匠を凝らしており、
+            建物の塀に沿って湧き水を引いた用水路が巡らされ、
+            悠々と泳ぐ鯉の姿がのどかです。<br>
+            また、金堂地区は国の重要伝統建造物群保存地区に選定されており、
+            平成27年には日本遺産「琵琶湖とその水辺景観-祈りと暮らしの水遺産」
+            に認定されました。
+        </p>
+    </main>
+</body>
+</html>
