@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>変数の利用</title>
+</head>
+
+<body>
+    <h3>変数の演算</h3>
+    <p>a=10、b=4の場合</p>
+    <button onclick="add();">足し算</button>
+    <button onclick="subtract();">引き算</button>
+    <button onclick="multiply();">掛け算</button>
+    <button onclick="divide();">割り算</button>
+    <script>
+        a = 10;
+        b = 4;
+        answer= 0;
+        function add(){
+            answer = a + b;
+            alert('答えは' + answer + 'です');
+        }
+
+        function subtract(){
+            answer = a - b;
+            alert('答えは' + answer + 'です');
+        }
+
+        function multiply(){
+            answer = a * b;
+            alert('答えは' + answer + 'です');
+        }
+
+        function divide(){
+            answer = a / b;
+            alert('答えは' + answer + 'です');
+        }
+    </script>
+</body>
+</html>

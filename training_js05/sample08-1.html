@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>関数の引用</title>
+</head>
+
+<body>
+    <h1>割引セール実施中！</h1>
+    <p>ボタンをクリックすると、割引後の価格が表示されます。</p>
+    <P>・S席（6000円） <button onclick="sale_S();">20% OFF</button></P>
+    <P>・A席（4200円） <button onclick="sale_A();">20% OFF</button></P>
+    <P>・B席（2800円） <button onclick="sale_B();">20% OFF</button></P>
+
+    <script>
+        function sale_S(){
+            let salePrice = 6000 * 0.8
+            alert('割引後の価格は' + salePrice + '円です');
+        }
+        function sale_A(){
+            let salePrice = 4200 * 0.8
+            alert('割引後の価格は' + salePrice + '円です');
+        }
+        function sale_B(){
+            let salePrice = 2800 * 0.8
+            alert('割引後の価格は' + salePrice + '円です');
+        }
+    </script>
+</body>
+</html>
