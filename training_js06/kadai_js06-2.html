@@ -12,12 +12,15 @@
 <body>
     <h1>座席の予約</h1>
     <p>東京会場<span id="yoyaku">(予約受付中)</span></p>
-    <button id="button" onclick="click">予約する</button>
-    <p id="text" style="display: none;"><strong>ありがとうございました。</strong></p>
+    <div id="change01">
+        <button onclick="reserve();">予約する</button>
+    </div>
     <script>
-    function click(){
-        document.getElementById("button").style.display = "none";
-        document.getElementById("text").style.display = "block";
+    function reserve(){
+        let anser = document.getElementById('yoyaku');
+        anser.innerHTML = '(予約済み)';
+        let change = document.getElementById('change01');
+        change.innerHTML = 'ありがとうございました。';
     }
     </script>
 </body>
