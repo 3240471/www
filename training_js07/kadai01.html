@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>複数要素の取得</title>
+</head>
+<body>
+    <h1>人口の多い国ランキング</h1>
+    <ol id="country">
+        <li id="chn">中国</li>
+        <li id="ind">インド</li>
+        <li id="usa">アメリカ</li>
+        <li id="idn">インドネシア</li>
+    </ol>
+    <button onclick="change_country();">国旗で表示</button>
+    <script>
+        function change_country(){
+            let anser_CHN = document.getElementById('chn');
+            anser_CHN.innerHTML = '<img src="images/flag_CHN.png">'
+            let anser_IND = document.getElementById('ind');
+            anser_IND.innerHTML = '<img src="images/flag_IND.png">'
+            let anser_USA = document.getElementById('usa');
+            anser_USA.innerHTML = '<img src="images/flag_USA.png">'
+            let anser_IDN = document.getElementById('idn');
+            anser_IDN.innerHTML = '<img src="images/flag_IDN.png">'
+        }
+    </script>
+</body>
+</html>
