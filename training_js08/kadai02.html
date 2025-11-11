@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>繰り返し処理</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td, th {
+            border: solid 1px #000000;
+            width: 60px;
+            padding: 5px;
+            text-align: center;
+        }
+        th {
+            background-color: #99cccc;
+        }
+    </style>
+</head>
+
+<body onload="createTable()">
+    <h1>入場料の一覧</h1>
+    <table>
+        <thead id="t_head"></thead>
+        <tbody id="t_body"></tbody>
+    </table>
+    <script>
+        function createTable() {
+            let row = '<tr><th></th>';
+                let lista  = [
+                    '大人', '高校生', '中学生', '小学生'
+                ];
+                let listb  = [
+                    '800', '680', '450', '380'
+                ];
+            for (let j = 0; j <= 3; j++){
+                row = row + '<th>' + lista[j] + '</th>';
+            }
+            row = row + '</tr>';
+            document.getElementById('t_head').insertAdjacentHTML('beforeend', row);
+        
+            for (let i = 1; i <= 5; i++){
+                let row = '<tr><th>' + i　+ '人' + '</th>';
+            for (let j = 0; j <= 3; j++){
+                row = row + '<td>' + listb[j]*i + '円' + '</td>';
+            }
+            row = row + '</tr>';
+            document.getElementById('t_body').insertAdjacentHTML('beforeend', row);
+            }
+        }
+    </script>
+</body>
+</html>

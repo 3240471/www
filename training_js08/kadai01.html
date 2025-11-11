@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>要素の追加と削除</title>
+</head>
+<body>
+    <h1>写真の一覧</h1>
+    <p>以下のボタンをクリックすると、写真が一覧表示されます</p>
+    <div id="photo_area"></div>
+    <button id="botan" onclick="display_photo();">写真の表示</button>
+    <script>
+        let list = [
+                'photo_1.jpg',
+                'photo_2.jpg',
+                'photo_3.jpg',
+                'photo_4.jpg',
+                'photo_5.jpg',
+                'photo_6.jpg',
+                'photo_7.jpg',
+                'photo_8.jpg'
+            ];
+        function display_photo(){
+            let box = document.getElementById('photo_area');
+            for(let i = 0; i < list.length; i++){
+                box.insertAdjacentHTML('beforeend', `<img src="${list[i]}">`);
+            }
+            document.getElementById('botan').remove();
+        }
+    </script>
+</body>
+</html>
