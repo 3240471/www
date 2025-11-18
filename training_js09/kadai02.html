@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Click Counter</title>
+</head>
+<body>
+    <div>
+        <h1>Click Counter ★ for構文</h1>
+        <p>ボタンをクリックすると、クリック回数の応じて結果が変わります。</p>
+        <p>JavaScriptのfor構文を使って処理を作ってみましょう。</p>
+    </div>
+    <p id="touch">クリック回数　</p>
+    <div id="touch"></div>
+    <button onclick="counter();">クリック</button>
+    <p>結果</p>
+    <div id="result"></div>
+
+    <script>
+        let count = 0;
+        function counter(){
+            let counta = count + 1;
+            document.getElementById('touch').innerHTML += counta + '回';
+            count++;
+            switch (count){
+                case 1:
+                    document.getElementById('result').innerHTML = '★';
+                break;
+                case 2:
+                    document.getElementById('result').innerHTML = '★★★★★';
+                break;
+                case 3:
+                    document.getElementById('result').innerHTML = '1,2,3,4,5';
+                break;
+                case 4:
+                    document.getElementById('result').innerHTML = '2,4,6,8,10';
+                break;
+                case 5:
+                    document.getElementById('result').innerHTML = 1 + 2 + 3 + 4 + 5;
+                break;
+                case 6:
+                    document.getElementById('result').textContent = 'クリアしました。カウントを0に戻します';
+                    count = 0;
+                    i = 0;
+                break;
+            
+        }
+    }
+    </script>
+</body>
+</html>
