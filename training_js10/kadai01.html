@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>条件分岐</title>
+    <style>
+        .formula{
+            font-size: 30px;
+            padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>問題</h2>
+    <p>次の方程式を満たす解を求めなさい。解は２つあります。</p>
+    <div class="formula">
+        <p>x<sup>2</sup></var>-6x+8=0</p>
+    </div>
+    <button onclick="check(1)">x=1</button>
+    <button onclick="check(2)">x=2</button>
+    <button onclick="check(3)">x=3</button>
+    <button onclick="check(2)">x=4</button>
+    <button onclick="check(5)">x=5</button>
+    <div id="answer" class="formula"></div>
+
+    <script>
+        function check(x){
+            if(x == 2){
+                document.getElementById('answer').innerHTML = '正解！';
+            }else{
+                document.getElementById('answer').innerHTML = '間違い！';
+            }
+        }
+    </script>
+</body>
+</html>
