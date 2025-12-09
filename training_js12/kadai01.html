@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>関数の戻り値</title>
+    <style>
+        .font{
+            background-color: lightsalmon;
+            margin-top: 30px;
+            padding: 20px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>1～10で割り切れる数字</h1>
+    <p>1、2、3、4、5、6、7、8、9、10</p>
+    <p>割り切れる最小の数値をJavaScriptで求めます。</p>
+    <button onclick="show();">結果を見る</button>
+    <div class="font" id="message">ここに結果が表示されます。</div>
+    <script>
+        function show(){
+            let anser = [];
+            let i = 1;
+            while(true){
+                if(
+                    i % 1 == 0 &&
+                    i % 2 == 0 &&
+                    i % 3 == 0 &&
+                    i % 4 == 0 &&
+                    i % 5 == 0 &&
+                    i % 6 == 0 &&
+                    i % 7 == 0 &&
+                    i % 8 == 0 &&
+                    i % 9 == 0 &&
+                    i % 10 == 0 
+                ){
+                    anser.push(i);
+                    break;
+                }
+                i++;
+            }
+            document.getElementById('message').textContent = '答えは' + anser + 'です。';
+        }
+    </script>
+</body>
+</html>
