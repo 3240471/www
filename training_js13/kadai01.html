@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>数値の入力とエラー処理</title>
+    <style>
+        .font{
+            background-color: lightsalmon;
+            margin-top: 30px;
+            padding: 20px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>n～mで割り切れる数字</h1>
+    <p>
+        1~10の好きな範囲で<br>
+        割り切れる最小の数値をJavaScriptで求めます。
+    </p>
+    <button onclick="show();">範囲を指定</button>
+    <div class="font" id="message">ここに結果が表示されます。</div>
+    <script>
+        let anser = [];
+        function show(){
+            let min = prompt('この範囲の最小値を1～10で入力してください');
+            let max = prompt('この範囲の最大値を1～10で入力してください');
+            for(let n = max; ; n++){
+                let i = true;
+                for(let m = min; m <= max; m++){
+                    if(n % m !== 0){
+                        i = false;
+                        break;
+                    }
+                }
+                if(i){
+                    anser.push(n);
+                    break;
+                }
+            }
+            document.getElementById('message').textContent = min +'～'+ max + 'で割り切れる最小の数値は' + anser + 'です。';
+        }
+    </script>
+</body>
+</html>
