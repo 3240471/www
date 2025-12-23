@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>プロパティ</title>
+    <style>
+        .box{
+            width: 500px;
+            height: auto;
+            border: 2px solid #000;
+            padding: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTMLの表示</h1>
+    <p>ボックス内の表示されている部分のHTMLを表示します。</p>
+    <div class="box" id="example">
+        <h3>人口800万人以上の都道府県</h3>
+        <ul>
+            <li>東京都</li>
+            <li>神奈川県</li>
+            <li>大阪府</li>
+        </ul>
+    </div>
+    <button onclick="show();">HTMLを表示</button>
+    <div class="box" id="result">
+        <p>ここにHTMLが表示されます。</p>
+    </div>
+    <script>
+        function show(){
+            const htmltext = document.getElementById('example').innerHTML;
+            document.getElementById('result').textContent = htmltext;
+        }
+    </script>
+</body>
+</html>
