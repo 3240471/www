@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oshizukan</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="shokai">
+    <h1 id="titleIndex">Offical髭男dismについてのWebサイトです</h1>
+    <a href="quiz.html" target="_blank" class="btn">クイズページへ</a>
+    <main class="setumei_all">
+        <h1 class="sectionTitle">Offical髭男dismとは</h1>
+        <div class="setumei">
+            <img src="img/HGDN_a-sha.jpg" class="setumeiIMG">
+            <blockquote class="setumeiP">
+            2012年結成、2015年4月に1stミニアルバム「ラブとピースは君の中」をリリースし、デビューする。<br>
+            2018年4月にMajor 1st Single「ノーダウト」でメジャーデビューを果たした。<br>
+            [L→R]Ba/Sax:楢﨑誠　Drs:松浦匡希　Vo/Pf:藤原聡　Gt:小笹大輔　<br>
+            </blockquote>
+            <footer><a href="https://higedan.com/feature/profile_of" target="_blank">出典</a></footer>
+            </div>
+    </main>
+    <section>
+        <div id="photo"></div>
+    </section>
+
+    <script>
+        let list = [
+    {
+        src:'img/TATTOO.jpeg', 
+        alt:'TATTOO', 
+        desc:`<strong>TATTOO</strong><br>
+        2023年4月21日配信リリースのデジタルシングルで、
+        TBS系ドラマ『ペンディングトレイン―8時23分、明日 君と』主題歌に起用。切ない恋心を「タトゥー（刻まれた想い）」に例え、
+        前を向く強さと愛の深さを描いた楽曲。ドラマとの世界観が共鳴するメロディが特徴。<br>
+        <a href="https://music.apple.com/jp/album/tattoo-single/1681216905" target="_blank">Apple Music</a><br>
+        <a href="https://open.spotify.com/album/3VqutKQybsb2z1IT9CDRUE?si=kfQiUWtCQiSvASXOsOKzyg" target="_blank">Spotify</a>`
+    },
+    {
+        src:'img/darlin.jpg', 
+        alt:'Darlin', 
+        desc:`<strong>ダーリン。</strong><br>
+        2015年4月22日リリースのインディーズ時代の楽曲で、
+        Official髭男dism初期の軽やかなラブソング。
+        日常の中の甘酸っぱい恋心を飾らず素直に表現し、メンバーの若い感性があふれる一曲。バンドの原点を感じさせる温かい歌詞が魅力。<br>
+        <a href="https://music.apple.com/jp/album/%E3%83%A9%E3%83%96%E3%81%A8%E3%83%94%E3%83%BC%E3%82%B9%E3%81%AF%E5%90%9B%E3%81%AE%E4%B8%AD/1024006746" target="_blank">Apple Music</a><br>
+        <a href="https://open.spotify.com/album/5k754JGg1QCJrQvU9YGA1E?si=bVf42ZUdSAWjCPbxizsCOQ" target="_blank">Spotify</a>`
+    },
+    {
+        src:'img/Apoptosis.jpeg',
+        alt:'Apoptosis', 
+        desc:`<strong>アポトーシス</strong><br>
+        2021年8月18日発売のアルバム『Editorial』のリード曲。
+        タイトルは「自然な死」を指す用語で、過去の自分との決別や再生を象徴。
+        荘厳な映像のMV制作やレコーディング映像も公開され、制作過程ではメンバーが曲への想いを語る姿が話題になった。<br>
+        <a href="https://music.apple.com/jp/album/editorial/1578260038" target="_blank">Apple Music</a><br>
+        <a href="https://open.spotify.com/intl-ja/album/0dOSO54LwPzxTUlnkEYxK1?si=qPbeWYbqQSKirJw1jHloWA" target="_blank">Spotify</a>`
+    },
+    {
+        src:'img/No_Doubt.jpeg', 
+        alt:'No_Doubt', 
+        desc:`<strong>ノーダウト</strong><br>
+        2018年4月11日にメジャーデビューシングルとしてリリースされ、
+        ドラマ『コンフィデンスマンJP』主題歌に抜擢された楽曲。サプライズ的に告知なしでリリースされ、幅広い層に支持されてヒット。
+        爽やかなポップサウンドで自信と希望を歌う。<br>
+        <a href="https://music.apple.com/jp/album/%E3%83%8E%E3%83%BC%E3%83%80%E3%82%A6%E3%83%88-single/1364825466" target="_blank">Apple Music</a><br>
+        <a href="https://open.spotify.com/album/0Yz5O9QDn0QTe4UMGgrUEs?si=GO55TftlT4WFMsvRWdUPuw" target="_blank">Spotify</a>`
+    },
+    {
+        src:'img/ESCAPADE.jpeg', 
+        alt:'ESCAPADE', 
+        desc:`<strong>ESCAPADE</strong><br>
+        2018年4月11日、バンド初のフルアルバム『Escaparade』と同日にリリースされたナンバー（アルバムタイトル曲）。
+        「冒険」を意味するタイトルどおり、インディーズ時代の挑戦や自由なエネルギーを感じさせるファンク／ポップ色の強い楽曲で、
+        ヒゲダン初期の勢いを象徴している。<br>
+        <a href="https://music.apple.com/jp/song/escapade/1394013616" target="_blank">Apple Music</a><br>
+        <a href="https://open.spotify.com/intl-ja/album/0Iz8ByVqKvdlyl77DV3y3p?si=g_xisGePS3mGUIeGSxxHjg" target="_blank">Spotify</a>`
+    }
+];
+let box = document.getElementById('photo');
+for(let i=0; i<list.length; i++){
+    box.insertAdjacentHTML('beforeend', `
+        <div class="photoItem">
+            <img src="${list[i].src}" alt="${list[i].alt}">
+            <div class="overlay">
+                <p>${list[i].desc}</p>
+            </div>
+        </div>
+    `);
+}
+document.querySelectorAll('.photoItem').forEach(item => {
+    item.addEventListener('touchstart', () => {
+        const overlay = item.querySelector('.overlay');
+        overlay.style.opacity = overlay.style.opacity == '1' ? '0' : '1';
+    });
+});
+</script>
+</body>
+</html>

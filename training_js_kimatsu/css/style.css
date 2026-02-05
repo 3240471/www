@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+#oshiquiz{
+    background-color: antiquewhite;
+}
+
+#shokai{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(198, 255, 255);
+    font-family: sans-serif;
+}
+
+#titleIndex{
+    margin: 0;
+    padding: 1.5vh 0;
+    text-align: center;
+    font-size: clamp(20px, 4vw, 32px);
+    background-color: white;
+}
+
+#titleIndex::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../img/rejoice_tuatora.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.btn:hover{
+    background-color: #45a049;
+}
+
+#quizbox{
+    border: 2px solid #333;
+    padding: 20px;
+    width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+button{
+    margin: 5px;
+}
+
+.result{
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.setumei_all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.sectionTitle{
+    margin: 0;
+    text-align: center;
+}
+
+.setumei{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 90%;
+}
+
+.setumeiIMG{
+    width: 512px;
+    max-width: 90%;
+    height: auto;
+    object-fit: cover;
+}
+
+.setumeiP{
+    flex: 1;
+    display: flex;
+    text-align: center;
+}
+
+.quiz_title{
+    text-align: center;
+}
+
+section{
+    margin-top: 30px;
+}
+
+#photo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.photoItem{
+    position: relative;
+    width: 30%;
+    min-width: 150px;
+}
+
+.photoItem img{
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.overlay p{
+    margin: 0;
+}
+
+.photoItem:hover .overlay{
+    opacity: 1;
+}
+
+@media(max-width: 600px){
+    .setumei {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .setumeiIMG {
+        width: 80%;
+    }
+    #photo img {
+        width: 45%;
+    }
+}
+
+@media (max-width: 400px){
+    #photo img {
+        width: 90%;
+    }
+}
