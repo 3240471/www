@@ -9,18 +9,7 @@ body {
     background: repeating-linear-gradient(to bottom, #ff6aa9 0px, #ff6aa9 8px, #ff7fb7 8px, #ff7fb7 16px);
     font-family: sans-serif;
     color: #000000;
-    /* スマホでの意図しない引っ張り更新などを防ぐ */
-    overscroll-behavior: none;
-}
-
-h1,
-h2,
-h3,
-p,
-div,
-span,
-a {
-    color: #000000;
+    overscroll-behavior: none; /* スマホの引っ張り更新防止 */
 }
 
 /* --- 基本ボタン --- */
@@ -137,8 +126,7 @@ button:active,
     border: 2px solid #333;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
-    /* スマホでドラッグ中に画面がスクロールしないようにする */
-    touch-action: none;
+    touch-action: none; /* ドラッグ中のスクロール防止 */
 }
 
 .edit_canvas_area img.purikura {
@@ -151,11 +139,310 @@ button:active,
     pointer-events: none;
 }
 
+/* --- エフェクトの定義 --- */
+.effect_mono img.purikura {
+    filter: grayscale(100%);
+}
+.effect_dust img.purikura {
+    filter: sepia(60%) contrast(110%) brightness(90%);
+}
+.effect_normal img.purikura {
+    filter: none;
+}
+
 /* アイテム・テンプレート制御 */
 .added-item {
     position: absolute;
     cursor: grab;
-    /* 重要：ブラウザのジェスチャー干渉を完全に防ぐ */
+    touch-action: none;
+    z-index: 20;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.added-item:active {
+    cursor: grabbing;
+}
+
+.template-item {
+    width: 350px !important;
+    height: 350px !important;
+    left: 0 !important;
+    top: 0 !important;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* 特例：青色ボタン */
+#complete_btn,
+.re-edit-btn,
+.emphasis-save {
+    background: #4bb3df !important;
+    box-shadow: 0 5px #3a8db0 !important;
+    color: #ffffff !important;
+}
+
+.sec_btn_e {
+    position: fixed;
+    bottom: 10px;
+    display: flex;
+    gap: 4px;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+}
+
+/* --- スライドエリア --- */
+.slide_e {
+    position: fixed;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    display: none;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(255, 147, 120, 0.95);
+    z-index: 500;
+    box-sizing: border-box;
+    align-items: center;
+    border-top: 2px solid #333;
+}
+
+.slide_e img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+#slide_eff {
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ================= save.html (完成画面) ================= */
+.purikura-final {
+    width: 350px;
+    height: 350px;
+    border: 2px solid #333;
+    margin-bottom: 30px;
+    background-color: white;
+    object-fit: cover;
+}
+
+.s_button_area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 350px;
+    margin-bottom: 120px;
+}
+
+.btn_save_standard,
+.re-edit-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.emphasis-save {
+    padding: 0 !important;
+    font-size: 18px !important;
+    box-shadow: 0 6px #3a8db0 !important;
+}
+
+/* ================= ホームボタン共通 ================= */
+.home-btn_wrap_fixed {
+    position: fixed;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55px;
+    height: 55px;
+    z-index: 1000;
+}
+
+.home-btn_a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    border-radius: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.home-btn_a img {
+    width: 25px;
+    height: auto;
+} /* ================= 全体共通設定 ================= */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: repeating-linear-gradient(to bottom, #ff6aa9 0px, #ff6aa9 8px, #ff7fb7 8px, #ff7fb7 16px);
+    font-family: sans-serif;
+    color: #000000;
+    overscroll-behavior: none; /* スマホの引っ張り更新防止 */
+}
+
+/* --- 基本ボタン --- */
+button,
+.btn_h,
+.submit-btn_a,
+.btn_e,
+.effect_btn {
+    background: #f4ea3a !important;
+    box-shadow: 0 5px #d1c732 !important;
+    border: none;
+    padding: 15px 15px;
+    font-size: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #000000 !important;
+    transition: all 0.2s;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+button:active,
+.btn_h:active,
+.submit-btn_a:active,
+.re-edit-btn:active,
+.emphasis-save:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ================= home.html ================= */
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title_h {
+    margin-top: 80px;
+    margin-bottom: 200px;
+    width: 90%;
+}
+
+.btn_h {
+    padding: 20px 60px;
+    font-size: 24px;
+}
+
+/* ================= app.html (アップロード) ================= */
+.container_a {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.upload-area_a {
+    width: 350px;
+    height: 350px;
+    background-color: rgba(183, 65, 118, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #333;
+}
+
+.upload-text_a {
+    color: #ffffff !important;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+#preview_a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.submit-btn_a {
+    margin-top: 40px;
+    padding: 15px 60px;
+    font-size: 24px;
+}
+
+/* ================= edit.html (編集画面) ================= */
+.main_e {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.edit_canvas_area {
+    width: 350px;
+    height: 350px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    touch-action: none; /* ドラッグ中のスクロール防止 */
+}
+
+.edit_canvas_area img.purikura {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* --- エフェクトの定義 --- */
+.effect_mono img.purikura {
+    filter: grayscale(100%);
+}
+.effect_dust img.purikura {
+    filter: sepia(60%) contrast(110%) brightness(90%);
+}
+.effect_normal img.purikura {
+    filter: none;
+}
+
+/* アイテム・テンプレート制御 */
+.added-item {
+    position: absolute;
+    cursor: grab;
     touch-action: none;
     z-index: 20;
     user-select: none;
