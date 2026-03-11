@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>dokoプリ!!</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/edit.js" defer></script>
+    </head>
+    <body>
+        <main class="main_e">
+            <div class="mainbtn_e">
+                <button type="button" onclick="location.reload()">全削除</button>
+                <button type="button" id="complete_btn">完成</button>
+            </div>
+
+            <div id="puri" class="edit_canvas_area">
+                <img id="edit_img" class="purikura" />
+            </div>
+        </main>
+
+        <section class="sec_btn_e">
+            <button class="btn_e" data-target="slide_tnp">テンプレ</button>
+            <button class="btn_e" data-target="slide_stp">スタンプ</button>
+            <button class="btn_e" data-target="slide_txt">文字</button>
+            <button class="btn_e" data-target="slide_eff">エフェクト</button>
+
+            <div id="slide_tnp" class="slide_e">
+                <img src="img/tnp/tyekku_tnp.png">
+                <img src="img/tnp/kirakira_tnp.png" />
+            </div>
+            <div id="slide_stp" class="slide_e">
+                <img src="img/stp/heart_stp.png">
+                <img src="img/stp/heart_type1_stp.png">
+                <img src="img/stp/heart_type2_stp.png">
+                <img src="img/stp/star_type2_stp.png">
+                <img src="img/stp/starneon_type2_stp.png">
+                <img src="img/stp/starneon_type3_stp.png">
+                <img src="img/stp/stear_type1_stp.png">
+            </div>
+            <div id="slide_txt" class="slide_e">
+                <img src="img/txt/daisuki_text .png" />
+                <img src="img/txt/heiseigyaru.png">
+                <img src="img/txt/itumen_text .png">
+                <img src="img/txt/utirasaikyou_text .png">
+            </div>
+            <div id="slide_eff" class="slide_e">
+                <button class="effect_btn" data-eff="dust">くすみ</button>
+                <button class="effect_btn" data-eff="mono">モノクロ</button>
+                <button class="effect_btn" data-eff="normal">ノーマル</button>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>dokoプリ!!</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/app.js" defer></script>
+    </head>
+    <body>
+        <div class="container_a">
+            <label id="upload-area_a" class="upload-area_a">
+                <span class="upload-text_a">画像を選択してね</span>
+                <img class="upload-icon_a" src="/img/upload.svg" alt="upload" />
+                <input id="inputFile_a" type="file" accept="image/*" />
+                <img id="preview_a" style="display:none;" />
+            </label>
+
+            <button onclick="location.href = 'edit.html'" class="submit-btn_a">Let's プリ！</button>
+
+            <div class="home-btn_wrap_fixed">
+                <a href="home.html" class="home-btn_a">
+                    <img src="/img/home.svg" alt="Home" />
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
