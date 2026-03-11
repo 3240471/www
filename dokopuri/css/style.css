@@ -9,6 +9,8 @@ body {
     background: repeating-linear-gradient(to bottom, #ff6aa9 0px, #ff6aa9 8px, #ff7fb7 8px, #ff7fb7 16px);
     font-family: sans-serif;
     color: #000000;
+    /* スマホでの意図しない引っ張り更新などを防ぐ */
+    overscroll-behavior: none;
 }
 
 h1,
@@ -21,7 +23,7 @@ a {
     color: #000000;
 }
 
-/* --- 基本ボタン（黄色：スタンプ切替、エフェクト、ホームなど） --- */
+/* --- 基本ボタン --- */
 button,
 .btn_h,
 .submit-btn_a,
@@ -135,6 +137,8 @@ button:active,
     border: 2px solid #333;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
+    /* スマホでドラッグ中に画面がスクロールしないようにする */
+    touch-action: none;
 }
 
 .edit_canvas_area img.purikura {
@@ -151,8 +155,15 @@ button:active,
 .added-item {
     position: absolute;
     cursor: grab;
+    /* 重要：ブラウザのジェスチャー干渉を完全に防ぐ */
     touch-action: none;
-    z-index: 5;
+    z-index: 20;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.added-item:active {
+    cursor: grabbing;
 }
 
 .template-item {
@@ -165,7 +176,7 @@ button:active,
     z-index: 10;
 }
 
-/* 特例：青色ボタン（完成・再編集・保存） */
+/* 特例：青色ボタン */
 #complete_btn,
 .re-edit-btn,
 .emphasis-save {
@@ -184,18 +195,18 @@ button:active,
     justify-content: center;
 }
 
-/* --- スライドエリアの修正 --- */
+/* --- スライドエリア --- */
 .slide_e {
     position: fixed;
     bottom: 70px;
     left: 0;
     width: 100%;
     height: 110px;
-    display: none; /* JSでflexに切り替え */
+    display: none;
     overflow-x: auto;
     gap: 10px;
     padding: 10px;
-    background-color: rgba(255, 147, 120, 0.95); /* 少し透明度を下げて高級感を */
+    background-color: rgba(255, 147, 120, 0.95);
     z-index: 500;
     box-sizing: border-box;
     align-items: center;
@@ -205,7 +216,7 @@ button:active,
 .slide_e img {
     width: 80px;
     height: 80px;
-    object-fit: contain; /* スタンプの形を崩さない */
+    object-fit: contain;
     flex-shrink: 0;
     background: #fff;
     border-radius: 10px;
@@ -247,7 +258,7 @@ button:active,
 }
 
 .emphasis-save {
-    padding: 0 !important; /* heightで制御 */
+    padding: 0 !important;
     font-size: 18px !important;
     box-shadow: 0 6px #3a8db0 !important;
 }
@@ -261,7 +272,6 @@ button:active,
     width: 55px;
     height: 55px;
     z-index: 1000;
-    ;
 }
 
 .home-btn_a {
@@ -271,7 +281,7 @@ button:active,
     text-decoration: none;
     width: 100%;
     height: 100%;
-    background-color: #000000; /* ホームは黄色 */
+    background-color: #000000;
     border-radius: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -279,5 +289,4 @@ button:active,
 .home-btn_a img {
     width: 25px;
     height: auto;
-    background-color: #000000;
 }
